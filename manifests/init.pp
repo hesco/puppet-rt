@@ -5,6 +5,7 @@
 #
 class rt (
     $dbtype,
+    $apt_backports = false,
     ) {
 
     include rt::params
