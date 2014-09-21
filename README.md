@@ -25,6 +25,12 @@ To install Request Tracker
 
     class { "rt": dbtype => "postgres" }
 
+To install Request Tracker, on Debian or Ubuntu, 
+if backports repository is not already enabled for other reasons.
+(This requires puppetlabs-apt module to be installed).
+
+    class { "rt": dbtype => "postgres", apt_backports => true }
+
 To install the Request Tracker RT::Authen::ExternalAuth extension
 
     class { "rt::ext::externalauth": }
@@ -98,7 +104,7 @@ Contributors
 
  * Darin Perusich <darin@darins.net> 
  * Puppet Labs <info@puppetlabs.com>
-
+ * Hugh Esco <hesco@campaignfoundations.com>
 
 Copyright and License
 ---------------------
