@@ -37,7 +37,7 @@ class rt (
         path    => $rt::params::rt_dir,
         owner   => root,
         group   => root,
-        mode    => 0755,
+        mode    => '0755',
         require => Package["rt"],
     }
     file { "RT_SiteConfig.pm":
@@ -45,7 +45,7 @@ class rt (
         path    => "$rt::params::rt_dir/RT_SiteConfig.pm",
         owner   => root,
         group   => $rt::params::rt_grp,
-        mode    => 0640,
+        mode    => '0640',
         require => Package["rt"]
     }
 }
