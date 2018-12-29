@@ -9,7 +9,7 @@ class rt::tool (
         ensure  => present,
         owner   => root,
         group   => root,
-        mode    => 0600,
+        mode    => '0600',
         content => template("rt/rtrc.erb"),
     }
 }
